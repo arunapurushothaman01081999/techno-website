@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    width: 90%;
+    height: 100px;
+    object-fit: contain;
+    animation: slideDown 1.5s ease-in-out;
+}
+
+/* Separator */
+.separator {
+    width: 80%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+    animation: glow 2s infinite ease-in-out;
+}
+
+/* Glowing separator animation */
+@keyframes glow {
+    0%   { box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); }
+    50%  { box-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+    100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); }
+}
+
+/* Glowing text */
+h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out, textGlow 2s infinite ease-in-out;
+}
+
+/* Text glow animation */
+@keyframes textGlow {
+    0%   { text-shadow: 0 0 5px rgba(255, 255, 255, 0.6); }
+    50%  { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+    100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.6); }
+}
+
+/* Coming Soon video */
+.coming-video {
+    width: 80%;
+    max-width: 600px;
+    height: 250px; /* Default height for desktop */
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+    .coming-video {
+        height: 150px; /* Smaller height for tablets */
+    }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+    .coming-video {
+        height: 120px; /* Smaller height for mobile */}
+}
+
+
+
+/* Logo slide animation */
+@keyframes slideDown {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Fade-in text animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1;}
+}
